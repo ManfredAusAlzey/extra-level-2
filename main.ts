@@ -4,6 +4,7 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
 })
 controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
     simplified.gravity_jump(mySprite)
+    music.play(music.melodyPlayable(music.jumpUp), music.PlaybackMode.UntilDone)
     animation.runImageAnimation(
     mySprite,
     assets.animation`jump`,
